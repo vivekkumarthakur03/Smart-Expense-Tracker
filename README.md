@@ -1,4 +1,4 @@
-# 💰 MERN Expense Tracker - Full Stack Financial Management
+# 💰 Daily Expense Tracker
 
 > A full-stack Expense Tracker built using the MERN stack (MongoDB, Express, React, Node.js) to help you manage and track your expenses efficiently.
 
@@ -128,10 +128,9 @@ Push to the Branch (git push origin main)
 
 Open a Pull Request
 ```
-👨‍💻 Developer
+👨‍💻 Developer Vivek
 <div align="center">
-Subham Nayak
-Full Stack Developer
+ 
 </div>
 
 

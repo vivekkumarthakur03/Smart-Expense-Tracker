@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import { APIUrl, handleError, handleSuccess } from '../utils';
 import '../login.css';
 
 // Optional icons
@@ -45,31 +44,34 @@ function Signup() {
 
         if (!name || !email || !password) {
             triggerShake();
-            return handleError('Name, email, and password are required');
+            alert('Name, email, and password are required');
+            return;
         }
 
         try {
-            const url = `${APIUrl}/auth/signup`;
-            const response = await fetch(url, {
-                method: "POST",
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(signupInfo)
-            });
+            const response = await fetch(
+                 'http://127.0.0.1:5000/auth/signup'
+,
+                {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(signupInfo)
+                }
+            );
 
             const result = await response.json();
-            const { success, message, error } = result;
+            const { success, message } = result;
 
             if (success) {
-                handleSuccess(message || 'Signup successful');
-                setTimeout(() => navigate('/login'), 1000);
+                alert(message || 'Signup successful');
+                setTimeout(() => navigate('/login'), 800);
             } else {
                 triggerShake();
-                const details = error?.details?.[0]?.message || message || 'Signup failed';
-                handleError(details);
+                alert(message || 'Signup failed');
             }
         } catch (err) {
             triggerShake();
-            handleError('Something went wrong. Please try again.');
+            alert('Something went wrong. Please try again.');
         }
     };
 
@@ -102,7 +104,6 @@ function Signup() {
                             id="name"
                             className="form-input"
                             placeholder="Enter your name"
-                            autoComplete="name"
                         />
                     </div>
 
@@ -116,7 +117,6 @@ function Signup() {
                             id="email"
                             className="form-input"
                             placeholder="Enter your email"
-                            autoComplete="email"
                         />
                     </div>
 
@@ -130,7 +130,6 @@ function Signup() {
                             id="password"
                             className="form-input"
                             placeholder="Enter your password"
-                            autoComplete="new-password"
                         />
                     </div>
 

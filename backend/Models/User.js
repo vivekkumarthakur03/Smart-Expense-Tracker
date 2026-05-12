@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
@@ -6,25 +6,37 @@ const UserSchema = new Schema({
         type: String,
         required: true,
     },
+
     email: {
         type: String,
         required: true,
         unique: true
     },
+
     password: {
         type: String,
         required: true,
     },
+
     expenses: [
         {
             text: {
                 type: String,
                 required: true
             },
+
             amount: {
                 type: Number,
                 required: true
             },
+
+            // 🔥 NEW FIELD
+            type: {
+                type: String,
+                enum: ['income', 'expense'],
+                required: true
+            },
+
             createdAt: {
                 type: Date,
                 default: Date.now
@@ -34,4 +46,5 @@ const UserSchema = new Schema({
 });
 
 const UserModel = mongoose.model('users', UserSchema);
+
 module.exports = UserModel;

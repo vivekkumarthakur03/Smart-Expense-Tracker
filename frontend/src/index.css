@@ -1,108 +1,86 @@
-
 *,
-::before,
-::after{
+*::before,
+*::after {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-label{
-  font-size: 20px;
-}
+/* ROOT FIX */
 
 html,
-body{
-  height: 100vh;
-  width: 100vw;
-}
-
-body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container{
-  background-color: #FFF;
-  padding: 32px 48px;
-  border-radius: 10px;
+body,
+#root {
   width: 100%;
-  max-width: 400px;
-  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  min-height: 100%;
+
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-.container > h1{
-  margin-bottom: 20px;
+body {
+  font-family: Arial, sans-serif;
+
+  background: #f4f7fb;
+
+  line-height: 1.5;
 }
 
-.container > form{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.container div{
-  display: flex;
-  flex-direction: column;
-}
-
-.container input{
-  width: 100%;
-  font-size: 20px;
-  padding: 10px;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid black;
-}
-
-.container input::placeholder{
-  font-size: 12px;
-  font-style: italic;
-}
-
-/* button{
-  background-color: purple;
-  border: none;
-  font-size: 15px;
-  color: white;
-  border-radius: 5px;
-  padding: 10px;
-  cursor: pointer;
-  margin: 10px 0;
-} */
+/* GLOBAL BUTTONS */
 
 button {
-  background-color: #8a2be2; /* More vibrant purple */
+  background-color: #8a2be2;
+
   border: none;
+
   font-size: 16px;
+
   color: white;
-  border-radius: 8px; /* Slightly larger radius */
-  padding: 12px 20px; /* More padding */
+
+  border-radius: 8px;
+
+  padding: 12px 20px;
+
   cursor: pointer;
+
   margin: 15px 0;
-  font-weight: 600; /* Semi-bold text */
-  letter-spacing: 0.5px; /* Slightly spaced letters */
-  transition: all 0.3s ease; /* Smooth hover effects */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-  background-color: #7b1fa2; /* Darker purple on hover */
-  transform: translateY(-2px); /* Slight lift effect */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  background-color: #7b1fa2;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 button:active {
-  transform: translateY(0); /* Reset position when clicked */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Flattened shadow */
+  transform: translateY(0);
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Specific style for delete button */
+/* DELETE BUTTON */
+
 .delete-button {
   background-color: #e74c3c;
+
+  color: white;
+
+  border: none;
+
   padding: 6px 12px;
+
   font-size: 14px;
+
   border-radius: 6px;
 }
 
@@ -110,56 +88,57 @@ button:active {
   background-color: #c0392b;
 }
 
-.user-section{
-  display: flex;
-  justify-content: space-between;
-}
+/* EXPENSE LIST */
 
-/* Minimal styling for the expense list */
 .expense-list {
   font-family: Arial, sans-serif;
 }
 
 .expense-item {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
+
   border-bottom: 1px solid #ccc;
+
+  padding: 10px 0;
 }
 
 .expense-description {
   font-weight: bold;
 }
 
-.delete-button {
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  padding: 4px 7px;
-  font-size: 15px;
-  cursor: pointer;
-  border-radius: 3px;
+/* USER SECTION */
+
+.user-section {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
 }
 
-.delete-button:hover {
-  background-color: #c0392b;
-}
+/* AMOUNTS */
 
 .amounts-container {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
+
   margin: 20px 0;
-  font-family: Arial, sans-serif;
+
   font-size: 18px;
 }
 
 .income-amount {
   color: #27ae60;
+
   font-weight: bold;
 }
 
-.expense-amount{
+.expense-amount {
   color: #c0392b;
+
   font-weight: bold;
 }

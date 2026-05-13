@@ -75,8 +75,7 @@ function Login() {
 
         try {
 
-            const response = await fetch(
-                'http://127.0.0.1:5000/auth/login',
+            const response = await fetch('https://smart-expense-tracker-8r2e.onrender.com/auth/login',
                 {
                     method: 'POST',
 

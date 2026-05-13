@@ -9,7 +9,7 @@ import './Home.css';
 import ExpenseTable from './ExpenseTable';
 import ExpenseForm from './ExpenseForm';
 
-const API = 'http://127.0.0.1:5000';
+ const API = 'https://smart-expense-tracker-8r2e.onrender.com';
 
 const handleSuccess = (msg) => toast.success(msg);
 const handleError = (msg) => toast.error(msg);

@@ -2,19 +2,6 @@
 
 > A full-stack Expense Tracker built using the MERN stack (MongoDB, Express, React, Node.js) to help you manage and track your expenses efficiently.
 
----
-
-## ✨ Key Features
-
-| Feature | Description | Preview |
-|---------|-------------|---------|
-| **📊 Financial Dashboard** | Real-time overview of your financial health | ![Dashboard](https://i.imgur.com/5vGk9ZL.png) |
-| **🔐 Secure Authentication** | JWT-based login/signup with password encryption | ![Login](https://i.imgur.com/mXwPj3f.png) |
-| **📈 Smart Analytics** | Interactive charts for spending patterns | ![Analytics](https://i.imgur.com/QZJYl9D.png) |
-| **📱 Mobile Responsive** | Works flawlessly on all devices | ![Mobile](https://i.imgur.com/8WnUVqg.png) |
-
----
-
 ## 🛠 Tech Stack
 
 ### Frontend
@@ -24,10 +11,6 @@
 |------------|---------|
 | React 18 | Component-based UI |
 | Tailwind CSS | Modern styling utility |
-| Chart.js | Data visualization |
-| Axios | HTTP requests |
-| React Icons | Beautiful icons |
-
 </div>
 
 ### Backend

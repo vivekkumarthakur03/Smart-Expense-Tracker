@@ -86,15 +86,11 @@ Financial Analytic
 <img width="1914" height="929" alt="image" src="https://github.com/user-attachments/assets/48fd169b-2884-46e8-b993-0411a513135c" />
 
 🌐 Deployment 
-Frontend (Vercel)
-```bash
-https://img.shields.io/badge/Deployed%2520on-Vercel-black?style=for-the-badge&logo=vercel
-```
+Frontend (Render)
+ 
 
 Backend (Render)
-```bash
-https://img.shields.io/badge/Deployed%2520on-Render-46E3B7?style=for-the-badge&logo=render
-```
+ 
 
 📜 License
 This project is licensed under the MIT License - see the LICENSE file for details.
